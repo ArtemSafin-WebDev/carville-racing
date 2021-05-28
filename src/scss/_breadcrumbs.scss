@@ -1,0 +1,35 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs__link {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-top: 0.5rem;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+    &.active {
+        color: #AFAFAF;
+        pointer-events: none;
+    }
+
+    &:not(.active):hover {
+        color: var(--primary-color);
+    }
+}
+
+.breadcrumbs__divider {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 0 3.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin: 0 1rem;
+    }
+}

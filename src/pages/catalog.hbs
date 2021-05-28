@@ -1,0 +1,844 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+
+<section class="catalog-products">
+    <div class="container ">
+        <div class="breadcrumbs catalog-products__breadcrumbs">
+            <a href="#" class="breadcrumbs__link">
+                Сarville Racing
+            </a>
+            <span class="breadcrumbs__divider">
+                /
+            </span>
+            <a href="#" class="breadcrumbs__link">
+                Каталог
+            </a>
+            <span class="breadcrumbs__divider">
+                /
+            </span>
+            <a href="#" class="breadcrumbs__link active">
+                Охлаждающие жидкости
+            </a>
+        </div>
+        <div class="catalog-products__top-row">
+            <h1 class="catalog-products__main-heading">
+                Охлаждающие жидкости
+            </h1>
+            <div class="catalog-products__docs">
+                <a href="#" class="catalog-products__docs-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-passports">
+                        <use xlink:href="#passports"></use>
+                    </svg>
+                    <span class="catalog-products__docs-link-text">
+                        Тех. паспорта
+                    </span>
+                </a>
+                <a href="#" class="catalog-products__docs-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-articles">
+                        <use xlink:href="#articles"></use>
+                    </svg>
+                    <span class="catalog-products__docs-link-text">
+                        Статьи
+                    </span>
+                </a>
+                <a href="#" class="catalog-products__docs-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-videos">
+                        <use xlink:href="#videos"></use>
+                    </svg>
+                    <span class="catalog-products__docs-link-text">
+                        Видео
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="catalog-products__layout">
+            <div class="catalog-products__layout-left-col">
+
+                <form class="catalog-products__filters" method="POST" action="/">
+                    <button class="catalog-products__filters-close-btn" type="button">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </button>
+                    <div class="catalog-products__filters-group">
+                        <h4 class="catalog-products__filters-group-heading">
+                            Классы антифриза
+                        </h4>
+                        <div class="catalog-products__filters-checkboxes">
+                            <label class="catalog-products__filters-checkbox">
+                                <input type="checkbox" name="classes" value="G11"
+                                    class="catalog-products__filters-checkbox-input" checked>
+                                <span class="catalog-products__filters-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="catalog-products__filters-checkbox-text">
+                                    G11
+                                </span>
+                            </label>
+                            <label class="catalog-products__filters-checkbox">
+                                <input type="checkbox" name="classes" value="G12"
+                                    class="catalog-products__filters-checkbox-input">
+                                <span class="catalog-products__filters-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="catalog-products__filters-checkbox-text">
+                                    G12
+                                </span>
+                            </label>
+                            <label class="catalog-products__filters-checkbox">
+                                <input type="checkbox" name="classes" value="tosol"
+                                    class="catalog-products__filters-checkbox-input">
+                                <span class="catalog-products__filters-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="catalog-products__filters-checkbox-text">
+                                    Tocoл
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="catalog-products__filters-group">
+                        <h4 class="catalog-products__filters-group-heading">
+                            Объем, л
+                        </h4>
+                        <div class="catalog-products__filtes-select">
+                            <select name="volume" class="js-custom-select">
+                                <option value="Не более 1">Не более 1</option>
+                                <option value="Не более 2">Не более 2</option>
+                                <option value="Не более 3">Не более 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="catalog-products__filters-group">
+                        <h4 class="catalog-products__filters-group-heading">
+                            Сезон
+                        </h4>
+                        <div class="catalog-products__filtes-select">
+                            <select name="season" class="js-custom-select">
+                                <option value="1">На любой сезон</option>
+                                <option value="2">На любой сезон</option>
+                                <option value="3">На любой сезон</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="catalog-products__filters-group">
+                        <h4 class="catalog-products__filters-group-heading">
+                            Вид антифриза
+                        </h4>
+                        <div class="catalog-products__filters-checkboxes">
+                            <label class="catalog-products__filters-checkbox">
+                                <input type="checkbox" name="type" value="Карбоксилатный"
+                                    class="catalog-products__filters-checkbox-input" checked>
+                                <span class="catalog-products__filters-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="catalog-products__filters-checkbox-text">
+                                    Карбоксилатный
+                                </span>
+                            </label>
+                            <label class="catalog-products__filters-checkbox">
+                                <input type="checkbox" name="type" value="Гибридный"
+                                    class="catalog-products__filters-checkbox-input">
+                                <span class="catalog-products__filters-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="catalog-products__filters-checkbox-text">
+                                    Гибридный
+                                </span>
+                            </label>
+                            <label class="catalog-products__filters-checkbox">
+                                <input type="checkbox" name="type" value="Tocoл"
+                                    class="catalog-products__filters-checkbox-input">
+                                <span class="catalog-products__filters-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="catalog-products__filters-checkbox-text">
+                                    Tocoл
+                                </span>
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="catalog-products__filters-group">
+                        <h4 class="catalog-products__filters-group-heading">
+                            Цвет
+                        </h4>
+                        <div class="catalog-products__filters-colors">
+                            <label class="catalog-products__filters-colors-checkbox">
+                                <input type="radio" name="color" value="1"
+                                    class="catalog-products__filters-colors-checkbox-input" checked>
+                                <span class="catalog-products__filters-colors-checkbox-mark"
+                                    style="background-color: #27AE60;">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+
+                            </label>
+                            <label class="catalog-products__filters-colors-checkbox">
+                                <input type="radio" name="color" value="2"
+                                    class="catalog-products__filters-colors-checkbox-input">
+                                <span class="catalog-products__filters-colors-checkbox-mark"
+                                    style="background-color: #F39A9A;">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+
+                            </label>
+                            <label class="catalog-products__filters-colors-checkbox">
+                                <input type="radio" name="color" value="3"
+                                    class="catalog-products__filters-colors-checkbox-input">
+                                <span class="catalog-products__filters-colors-checkbox-mark"
+                                    style="background-color: #82B3F4;">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="catalog-products__filters-group">
+                        <h4 class="catalog-products__filters-group-heading">
+                            Цена, руб.
+                        </h4>
+                        <div class="catalog-products__filters-price-range js-price-range">
+                            <input type="hidden" name="price">
+                            <div class="catalog-products__filters-price-range-current">
+
+                            </div>
+                            <div class="catalog-products__filters-price-range-element" data-min="100" data-max="1340"
+                                data-step="100" data-start="500">
+
+                            </div>
+                            <div class="catalog-products__filters-price-range-min-max">
+                                <span>
+                                    220 руб.
+                                </span>
+                                <span>
+                                    1 340 руб.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="catalog-products__layout-right-col">
+                <div class="catalog-products__controls">
+                    <div class="catalog-products__count">
+                        12 товаров
+                    </div>
+                    <div class="catalog-products__sorting">
+                        <div class="catalog-products__sorting-text">
+                            Сортировать:
+                        </div>
+                        <div class="catalog-products__sorting-select">
+                            <select name="sorting" class="js-custom-select">
+                                <option value="По названию">По названию</option>
+                                <option value="По цене">По цене</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="catalog-products__views">
+                        <a href="#" class="catalog-products__views-link active">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-grid-view">
+                                <use xlink:href="#grid-view"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="catalog-products__views-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-grid-view-2">
+                                <use xlink:href="#grid-view-2"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="catalog-products__views-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-list-view">
+                                <use xlink:href="#list-view"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <button class="catalog-products__filters-mobile-btn">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-filter">
+                            <use xlink:href="#filter"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="catalog-products__list">
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/1.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    Антифриз Carville Racing карбоксилатный флуоресцентный -40°С, 1л
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/2.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    ТОСОЛ Carville Racing -40°С, 1л
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/3.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    Очиститель Carville Racing тормозов и деталей сцепления, аэрозоль, 520ml
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/4.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    Антифриз Carville Racing карбоксилатный флуоресцентный -40°С, 1л
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/5.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    Антифриз Carville Racing карбоксилатный флуоресцентный -40°С, 1л
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/6.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    Антифриз Carville Racing карбоксилатный флуоресцентный -40°С, 1л
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/7.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    Антифриз Carville Racing карбоксилатный флуоресцентный -40°С, 1л
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/8.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    Антифриз Carville Racing карбоксилатный флуоресцентный -40°С, 1л
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-products__list-item">
+                        <div class="catalog-products__card">
+                            <a href="#" class="catalog-products__card-image-container">
+                                <img src="img/products/9.jpg" alt="" class="catalog-products__card-image">
+                            </a>
+                            <a href="#" class="catalog-products__card-copy-code" data-code="AGT-S-00">
+                                Код: AGT-S-00
+                                <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                    <use xlink:href="#copy"></use>
+                                </svg>
+                            </a>
+                            <h4 class="catalog-products__card-title">
+                                <a href="#">
+                                    Антифриз Carville Racing карбоксилатный флуоресцентный -40°С, 1л
+                                </a>
+
+                            </h4>
+                            <div class="catalog-products__card-specs">
+                                <div class="catalog-products__card-specs-item">
+                                    Критализация: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Замерзание: - 40°С
+                                </div>
+                                <div class="catalog-products__card-specs-item">
+                                    Производство: Карбоксилатная
+                                </div>
+                            </div>
+                            <div class="catalog-products__card-price-block">
+                                <div class="catalog-products__card-divider">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-copy">
+                                        <use xlink:href="#three-dots"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="catalog-products__card-price">
+                                    <div class="catalog-products__card-price-recommended-text">
+                                        рекомендуемая цена
+                                    </div>
+                                    <div class="catalog-products__card-price-amount">
+                                        465 руб.
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-products__card-where-to-buy">
+                                    Где купить
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="catalog-products__pagination">
+                    <a href="#" class="catalog-products__pagination-prev">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-prev">
+                            <use xlink:href="#prev"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="catalog-products__pagination-link current">
+                        1
+                    </a>
+                    <a href="#" class="catalog-products__pagination-link">
+                        2
+                    </a>
+                    <a href="#" class="catalog-products__pagination-link">
+                        3
+                    </a>
+                    <a href="#" class="catalog-products__pagination-next">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-next">
+                            <use xlink:href="#next"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="catalog-advantages">
+    <div class="container">
+        <div class="catalog-advantages__block">
+            <h4 class="catalog-advantages__block-heading">
+                Охлаждающие жидкости<br> Carville Racing
+            </h4>
+            <div class="catalog-advantages__block-text">
+                <p>
+                    Антифриз — не замерзающая при низких температурах жидкость, которую используют для систем охлаждения
+                    двигателей внутреннего сгорания. Благодаря своим химическим свойствам, антифриз имеет температуру
+                    замерзания ниже, чему воды, а вот температуру кипения – выше, поэтому использовать его
+                    можнокруглогодично. Чтобы мотор работал бесперебойно и не перегревался, следуетиспользовать
+                    качественный и правильно подобранный антифриз.
+                </p>
+            </div>
+        </div>
+        <div class="catalog-advantages__block">
+            <h4 class="catalog-advantages__block-heading">
+                На что обратить внимание при выборе
+            </h4>
+            <div class="catalog-advantages__block-text">
+                <p>
+                    Охлаждающая жидкость отвечает за чистоту каналов циркуляции, радиаторовотопителя и охлаждения. От ее
+                    качества напрямую зависит предусмотренныйтепловой режим двигателя. ТОСОЛ и антифриз Carville Racing
+                    применяются всистеме охлаждения легкового и коммерческого транспорта, эксплуатируемогопри
+                    температуре окружающей среды до – 40 С.
+                </p>
+                <p>
+                    В каталоге представлен ТОСОЛ, гибридный и карбоксилатный антифризы. Мы неиспользуем даунсайзинг и не
+                    предлагаем упаковку в килограммах, так как уохлаждающей жидкости высокая плотность: 5 кг антифриза
+                    равны 4,6 литрам. Длявашего удобства наши упаковки включают 3 объема – 1 литр, 5 литров и 10литров,
+                    так как все заливочные объемы в инструкциях к авто указаны в литрах. Выможете купить 5 литров
+                    антифриза для личного пользования или купить 10 литровантифриза для заливки сразу в несколько авто.
+                </p>
+                <p>
+                    В антифризы добавлен зеленый и красный флуоресцентный краситель чтобыможно было быстро выявить
+                    протечки в ультрафиолетовом цвете. В описании каждого товара перечислены спецификации, которым
+                    соответствует данныйпродукт.
+                </p>
+
+            </div>
+        </div>
+        <div class="catalog-advantages__block">
+            <h4 class="catalog-advantages__block-heading">
+                Преимущества охлаждающей жидкости Carville Racing
+            </h4>
+            <div class="catalog-advantages__block-text">
+                <p>
+                    Все представленная линейка охлаждающей жидкости эффективно работает притемпературе окружающей среды
+                    до –
+                    40С. У антифризов повышеннаяэффективность охлаждения двигателя, а высокотемпературные
+                    свойстважидкости
+                    обеспечивают защиту от коррозии всех металлов системы охлаждения,включая алюминий и алюминиевые
+                    сплавы,
+                    латунь, медь и сталь.
+                </p>
+                <p>
+                    Охлаждающая жидкость благодаря своему составу увеличивает срокэксплуатации помпы, радиатора, насоса
+                    и
+                    резиновых уплотнителей и защищаетгильзы цилиндров двигателя от кавитации, гарантируя отсутствие
+                    засоров
+                    иотложений в радиаторе.
+                </p>
+                <p>
+                    У ТОСОЛа и зеленого гибридного антифриза G11срок службы составляет 3 годаили 150000 км пробега.
+                    Антифриз
+                    Carville Racing карбоксилатный красный G12+обладает повышенным сроком службы – до 5 лет или 250000
+                    км
+                    пробега.
+                </p>
+
+
+            </div>
+        </div>
+        <div class="catalog-advantages__block">
+            <h4 class="catalog-advantages__block-heading">
+                Где купить антифриз?
+            </h4>
+            <div class="catalog-advantages__block-text">
+                <p>
+                    Оставьте заявку на сотрудничество на нашем сайте в форме обратной связи поссылке или напишите на
+                    почту info@carville.racing. Чтобы купить охлаждающиежидкости в розницу, выберите авторизованную
+                    точку продаж вашего города иоформите заказ. На сайте указана рекомендуемая розничная цена антифриза.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

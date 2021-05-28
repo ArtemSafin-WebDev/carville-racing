@@ -1,0 +1,43 @@
+.catalog-advantages {
+    background: #f9f9f9;
+    padding: 8rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+    }
+}
+
+.catalog-advantages__block {
+    margin-bottom: 4.5rem;
+    display: grid;
+    grid-template-columns: 38rem minmax(0, 1fr);
+    grid-gap: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 1.5rem;
+        grid-template-columns: minmax(0, 1fr);
+        margin-bottom: 3rem;
+    }
+}
+
+.catalog-advantages__block-text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    p {
+        margin-bottom: 1.4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.catalog-advantages__block-heading {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+}

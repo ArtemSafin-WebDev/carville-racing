@@ -1,0 +1,159 @@
+.brands {
+    margin-bottom: 4rem;
+    background-color: var(--primary-color);
+    color: white;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+.brands__row {
+    display: flex;
+    margin-right:  calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        flex-direction: column;
+    }
+}
+
+.brands__left-col {
+    width: 58rem;
+    position: relative;
+    flex-shrink: 0;
+  
+   
+    padding: 12rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        flex-shrink: 1;
+        width: 100%;
+    }
+    
+}
+
+.brands__right-col {
+    width: 50%;
+    flex-grow: 1;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        width: auto;
+        margin: 0 calc(-1 * var(--content-padding));
+        flex-grow: 0;
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 56.25%;
+        }
+    }
+   
+}
+
+.brands__video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--text-color);
+        opacity: .6;
+    }
+
+    .icon-play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 6rem;
+        height: 6rem;
+        fill: var(--primary-color);
+        z-index: 40;
+        transition: transform .3s;
+
+        @include breakpoint(mobile) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    .no-touch &:hover {
+        .icon-play {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    }
+}
+
+.brands__video-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brands__text-content {
+    margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.brands__heading {
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.3;
+    }
+}
+
+.brands__text {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+}
+
+.brands__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 3rem;
+    }
+}
+
+.brands__link {
+    display: block;
+}
+
+.brands__link-image {
+    display: block;
+    height: 4.4rem;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+
+    @include breakpoint(mobile) {
+        height: 3rem;
+    }
+}

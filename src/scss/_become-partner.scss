@@ -1,0 +1,110 @@
+.become-partner {
+    margin-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.become-partner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 9.5rem 5rem;
+    background: #F9F9F9;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.become-partner__logo {
+    width: 9.5rem;
+    height: auto;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        width: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.become-partner__heading {
+    font-weight: bold;
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+.become-partner__conditions {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid currentColor;
+    color: #3D3F49;
+    transition: border-color .2s;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+    &:link,
+    &:visited {
+        color: #3D3F49;
+    }
+
+    &:hover {
+        border-color: transparent;
+    }
+}
+
+
+.become-partner__link {
+    display: inline-flex;
+    align-items: center;
+    justify-tracks: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 6rem;
+    transition: color .2s, background-color .2s;
+
+    @include breakpoint(mobile) {
+        padding: 1.64rem 3rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+}
+
+.become-partner__text {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    max-width: 100rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #3d3f49;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+}
