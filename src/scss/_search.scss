@@ -1,0 +1,38 @@
+.search__row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column-gap: 4rem;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.search__col {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+    }
+}
+
+.search {
+    @include breakpoint(mobile) {
+        .goods__card-category {
+            text-align: left;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            font-family: var(--helvetica);
+            font-weight: 400;
+        }
+
+        .goods__card-count {
+            text-align: left;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+    }
+}
