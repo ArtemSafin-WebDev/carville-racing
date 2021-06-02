@@ -2,6 +2,11 @@
     padding-bottom: 3rem;
     padding-top: 2rem;
     background-color: #f9f9f9;
+
+    @include breakpoint(mobile) {
+        background-color: #fff;
+        padding: 0;
+    }
 }
 
 .panel__row {
@@ -12,6 +17,7 @@
 
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
+        display: none;
     }
 }
 
@@ -54,6 +60,7 @@
     &.selected {
         color: white;
         background-color: var(--primary-color);
+        margin: -1px;
         &:link,
         &:visited {
             color: white;
@@ -86,7 +93,6 @@
     padding-right: 2rem;
 
     @include breakpoint(mobile) {
-        
         min-height: 4.5rem;
     }
 }
@@ -101,7 +107,6 @@
         color: #afafaf;
     }
 }
-
 
 .panel__form-submit {
     flex-shrink: 0;
@@ -123,4 +128,7 @@
 
 .panel__breadcrumbs {
     margin-top: 3rem;
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
 }

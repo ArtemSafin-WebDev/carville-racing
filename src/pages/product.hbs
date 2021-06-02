@@ -74,19 +74,64 @@
         </h1>
         <div class="product__layout">
             <div class="product__layout-sidebar">
-                <div class="product__gallery">
-                    <a href="img/product.jpg" class="product__gallery-image-link" data-fancybox="product">
-                        <img src="img/product.jpg" alt="" class="product__gallery-image">
-                    </a>
-                    <a href="img/product.jpg" class="product__gallery-image-link" data-fancybox="product">
-                        <img src="img/product.jpg" alt="" class="product__gallery-image">
-                    </a>
-                    <a href="img/product.jpg" class="product__gallery-image-link" data-fancybox="product">
-                        <img src="img/product.jpg" alt="" class="product__gallery-image">
-                    </a>
-                    <a href="img/product.jpg" class="product__gallery-image-link" data-fancybox="product">
-                        <img src="img/product.jpg" alt="" class="product__gallery-image">
-                    </a>
+                <div class="product__gallery js-product-gallery">
+                    <div class="product__gallery-main-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="img/product.jpg" class="product__gallery-image-link">
+                                        <img src="img/product.jpg" alt="" class="product__gallery-image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/product.jpg" class="product__gallery-image-link">
+                                        <img src="img/product.jpg" alt="" class="product__gallery-image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/product.jpg" class="product__gallery-image-link">
+                                        <img src="img/product.jpg" alt="" class="product__gallery-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__gallery-thumbs-slider">
+                        <button class="product__gallery-thumbs-slider-arrow product__gallery-thumbs-slider-arrow--prev">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-left">
+                                <use xlink:href="#slider-arrow-left"></use>
+                            </svg>
+                        </button>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="img/product.jpg" class="product__gallery-image-link">
+                                        <img src="img/product.jpg" alt="" class="product__gallery-image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/product.jpg" class="product__gallery-image-link">
+                                        <img src="img/product.jpg" alt="" class="product__gallery-image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/product.jpg" class="product__gallery-image-link">
+                                        <img src="img/product.jpg" alt="" class="product__gallery-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="product__gallery-thumbs-slider-arrow product__gallery-thumbs-slider-arrow--next">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                <use xlink:href="#slider-arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+
+
+
                 </div>
             </div>
             <div class="product__layout-main">
@@ -107,7 +152,7 @@
                                 <img src="img/features/2.png" alt="" class="product__features-card-image">
                             </div>
                             <div class="product__features-card">
-                                <img src="img/features/3.png" alt="" class="product__features-card-image">
+                                <img src="img/luzar-grey.svg" alt="" class="product__features-card-image">
                                 <div class="product__features-card-dropdown">
                                     <div class="product__features-card-dropdown-inner">
                                         Протестировано и рекомендовано специалистами ведущего российского производителя
@@ -151,6 +196,22 @@
                                 <a href="#" class="product__tabs-link js-tabs-link">
                                     Преимущества
                                 </a>
+                            </div>
+                            <div class="product__tabs-select">
+                                <select name="select-tab" class="js-custom-select js-tabs-select">
+                                    <option value="0">
+                                        Материалы
+                                    </option>
+                                    <option value="1">
+                                        Характеристики
+                                    </option>
+                                    <option value="2">
+                                        Спецификация
+                                    </option>
+                                    <option value="3">
+                                        Преимущества
+                                    </option>
+                                </select>
                             </div>
                             <div class="product__tabs-items">
                                 <div class="product__tabs-item js-tabs-item">
@@ -364,40 +425,40 @@
                                     </div>
                                 </div>
                                 <div class="product__tabs-item js-tabs-item">
-                                   <ul class="product__advantages-list">
-                                       <li class="product__advantages-list-item">
-                                           <img src="img/advantages/1.png" alt="" class="product__advantages-icon">
-                                           Повышенная эффективность охлаждения двигателя
-                                       </li>
-                                       <li class="product__advantages-list-item">
-                                           <img src="img/advantages/2.png" alt="" class="product__advantages-icon">
-                                           Идеальная высокотемпературная защита алюминия
-                                       </li>
-                                       <li class="product__advantages-list-item">
-                                           <img src="img/advantages/3.png" alt="" class="product__advantages-icon">
-                                           Увеличениение срока эксплуатации водяного насоса
-                                       </li>
-                                       <li class="product__advantages-list-item">
-                                           <img src="img/advantages/4.png" alt="" class="product__advantages-icon">
-                                           Высокая стабильность эксплуатационных свойств
-                                       </li>
-                                       <li class="product__advantages-list-item">
-                                           <img src="img/advantages/5.png" alt="" class="product__advantages-icon">
-                                           Улучшенная соввестимость с пластиками и эластомерами
-                                       </li>
-                                       <li class="product__advantages-list-item">
-                                           <img src="img/advantages/6.png" alt="" class="product__advantages-icon">
-                                           Отсутствие засоров и отложений в радиаторе
-                                       </li>
-                                       <li class="product__advantages-list-item">
-                                           <img src="img/advantages/7.png" alt="" class="product__advantages-icon">
-                                           Отличная высокотемпературная стабильность
-                                       </li>
-                                       <li class="product__advantages-list-item">
-                                           <img src="img/advantages/8.png" alt="" class="product__advantages-icon">
-                                           Увеличеннный ресурс эксплуатации
-                                       </li>
-                                   </ul>
+                                    <ul class="product__advantages-list">
+                                        <li class="product__advantages-list-item">
+                                            <img src="img/advantages/1.png" alt="" class="product__advantages-icon">
+                                            Повышенная эффективность охлаждения двигателя
+                                        </li>
+                                        <li class="product__advantages-list-item">
+                                            <img src="img/advantages/2.png" alt="" class="product__advantages-icon">
+                                            Идеальная высокотемпературная защита алюминия
+                                        </li>
+                                        <li class="product__advantages-list-item">
+                                            <img src="img/advantages/3.png" alt="" class="product__advantages-icon">
+                                            Увеличениение срока эксплуатации водяного насоса
+                                        </li>
+                                        <li class="product__advantages-list-item">
+                                            <img src="img/advantages/4.png" alt="" class="product__advantages-icon">
+                                            Высокая стабильность эксплуатационных свойств
+                                        </li>
+                                        <li class="product__advantages-list-item">
+                                            <img src="img/advantages/5.png" alt="" class="product__advantages-icon">
+                                            Улучшенная соввестимость с пластиками и эластомерами
+                                        </li>
+                                        <li class="product__advantages-list-item">
+                                            <img src="img/advantages/6.png" alt="" class="product__advantages-icon">
+                                            Отсутствие засоров и отложений в радиаторе
+                                        </li>
+                                        <li class="product__advantages-list-item">
+                                            <img src="img/advantages/7.png" alt="" class="product__advantages-icon">
+                                            Отличная высокотемпературная стабильность
+                                        </li>
+                                        <li class="product__advantages-list-item">
+                                            <img src="img/advantages/8.png" alt="" class="product__advantages-icon">
+                                            Увеличеннный ресурс эксплуатации
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

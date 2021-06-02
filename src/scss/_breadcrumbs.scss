@@ -1,13 +1,21 @@
 .breadcrumbs {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+ 
+    @include breakpoint(mobile) {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 .breadcrumbs__link {
     font-size: 1.8rem;
     line-height: 2.4rem;
     margin-top: 0.5rem;
+    text-overflow: ellipsis;
+    
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 1.4;

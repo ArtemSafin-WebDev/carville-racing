@@ -1,7 +1,7 @@
 .page-header {
     position: relative;
     z-index: 120;
-    background: #141515;
+    background: #1a1b1f;
     color: white;
 }
 
@@ -14,7 +14,7 @@
     }
 
     @include breakpoint(mobile) {
-        min-height: 7rem;
+        min-height: 4.8rem;
     }
 }
 
@@ -25,7 +25,7 @@
     @include breakpoint(mobile) {
         position: relative;
         z-index: 300;
-        width: 5rem;
+        width: 4rem;
         margin-right: 0;
     }
 }
@@ -51,6 +51,8 @@
     }
 }
 
+
+
 .page-header__menu {
     width: 50%;
     flex-grow: 1;
@@ -69,7 +71,7 @@
         overflow-x: hidden;
         backface-visibility: hidden;
         -webkit-overflow-scrolling: touch;
-        background: #2e2a25;
+        background: #1a1b1f;
         color: white;
         z-index: 200;
         padding: 3rem var(--content-padding);
@@ -102,7 +104,8 @@
     @include breakpoint(mobile) {
         margin-right: 0;
         margin-bottom: 2rem;
-        font-size: 2.4rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
         &:last-child {
             margin-bottom: 0;
         }
@@ -156,9 +159,9 @@
 
     @include breakpoint(mobile) {
         margin-right: 0;
-        margin-bottom: 2rem;
-        font-size: 2rem;
-        line-height: 1.3;
+        margin-bottom: 1.6rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
         &:last-child {
             margin-bottom: 0;
         }
@@ -177,11 +180,28 @@
     align-items: center;
     margin-left: auto;
 
+    &--mobile {
+        display: none;
+    }
+
     @include breakpoint(mobile) {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-gap: 2rem;
-        margin-bottom: 3rem;
+      
+        
+
+        display: none;
+
+        &--mobile {
+            display: flex;
+            align-items: center;
+            min-height: 4.8rem;
+            background: #EA5B0C;
+            color: white;
+            justify-content: space-between;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin: 0 calc(-1 * var(--content-padding));
+            padding: 0 var(--content-padding);
+        }
     }
 }
 
@@ -189,9 +209,14 @@
     margin-right: 3.5rem;
     display: inline-flex;
     align-items: center;
-
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     &:hover {
         color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: 2rem;
     }
 
     svg {
@@ -204,6 +229,11 @@
         @include breakpoint(mobile) {
             width: 2rem;
             height: 2rem;
+
+            &.icon-rub {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
         }
     }
     &:last-child {
@@ -218,7 +248,10 @@
 
     @include breakpoint(mobile) {
         margin-left: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+
+        font-size: 1.8rem;
+        line-height: 2.4rem;
     }
 
     &:hover {
@@ -240,6 +273,11 @@
 
     @include breakpoint(mobile) {
         margin: 0;
+
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        padding: .7rem 1rem;
+        align-self: flex-start;
     }
     &:link,
     &:visited {
@@ -251,7 +289,13 @@
         width: 1.8rem;
         height: 1.8rem;
         fill: currentColor;
-    }
+
+        @include breakpoint(mobile) {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 1.2rem;
+        }
+    } 
 
     &:hover {
         color: white;
@@ -269,28 +313,56 @@
         justify-content: space-between;
         position: relative;
         z-index: 300;
-        margin-left: auto;
+       
         span {
             width: 100%;
-            height: 0.2rem;
+            height: 0.3rem;
+            border-radius: 0.1rem;
             background-color: #fff;
             margin-bottom: 0.6rem;
-            transition: transform .3s, opacity .3s;
+            transition: transform 0.3s, opacity 0.3s;
             &:last-child {
                 margin-bottom: 0;
             }
 
             .mobile-menu-open & {
                 &:nth-child(1) {
-                    transform: translateY(.8rem) rotate(45deg);
+                    transform: translateY(0.9rem) rotate(45deg);
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:nth-child(3) {
-                    transform: translateY(-.8rem) rotate(-45deg);
+                    transform: translateY(-0.9rem) rotate(-45deg);
                 }
             }
         }
     }
 }
+
+
+.page-header__nav--mobile-categories {
+    display: none;
+    @include breakpoint(mobile) {
+        display: flex;
+    }
+}
+
+.page-header__mobile-search {
+    flex-shrink: 0;
+    margin-right: 2.4rem;
+    display: none;
+    margin-left: auto;
+    position: relative;
+    z-index: 300;
+    @include breakpoint(mobile) {
+        display: inline-flex;
+    }
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: white;
+        display: block;
+    }
+}
+

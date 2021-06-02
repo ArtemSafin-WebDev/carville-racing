@@ -10,7 +10,7 @@ export default function newsSlider() {
         const container = element.querySelector('.swiper-container');
         new Swiper(container, {
             slidesPerView: 'auto',
-            spaceBetween: 20,
+            spaceBetween: 35,
             watchOverflow: true
         })
     })

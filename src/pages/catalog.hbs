@@ -56,12 +56,18 @@
         <div class="catalog-products__layout">
             <div class="catalog-products__layout-left-col">
 
-                <form class="catalog-products__filters" method="POST" action="/">
-                    <button class="catalog-products__filters-close-btn" type="button">
-                        <svg width="14" height="14" aria-hidden="true" class="icon-cross">
-                            <use xlink:href="#cross"></use>
-                        </svg>
-                    </button>
+                <form class="catalog-products__filters" method="POST" action="/" id="filters-form">
+                    <div class="catalog-products__filters-top-row">
+                        <div class="catalog-products__filters-found">
+                            Фильтр (4)
+                        </div>
+                        <button class="catalog-products__filters-close-btn" type="button">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+
                     <div class="catalog-products__filters-group">
                         <h4 class="catalog-products__filters-group-heading">
                             Классы антифриза
@@ -109,7 +115,7 @@
                         <h4 class="catalog-products__filters-group-heading">
                             Объем, л
                         </h4>
-                        <div class="catalog-products__filtes-select">
+                        <div class="catalog-products__filters-select">
                             <select name="volume" class="js-custom-select">
                                 <option value="Не более 1">Не более 1</option>
                                 <option value="Не более 2">Не более 2</option>
@@ -121,7 +127,7 @@
                         <h4 class="catalog-products__filters-group-heading">
                             Сезон
                         </h4>
-                        <div class="catalog-products__filtes-select">
+                        <div class="catalog-products__filters-select">
                             <select name="season" class="js-custom-select">
                                 <option value="1">На любой сезон</option>
                                 <option value="2">На любой сезон</option>
@@ -236,6 +242,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="catalog-products__filters-bottom-controls">
+                        <button type="reset" class="catalog-products__filters-mobile-reset">
+                            Сбросить
+                        </button>
+                        <button type="submit" class="catalog-products__filters-mobile-submit">
+                            Показать (5)
+                        </button>
+                    </div>
                 </form>
             </div>
             <div class="catalog-products__layout-right-col">
@@ -273,9 +288,7 @@
                     </div>
 
                     <button class="catalog-products__filters-mobile-btn">
-                        <svg width="14" height="14" aria-hidden="true" class="icon-filter">
-                            <use xlink:href="#filter"></use>
-                        </svg>
+                        Фильтровать
                     </button>
                 </div>
 

@@ -4,6 +4,7 @@ export default function tabs() {
     elements.forEach(element => {
         const links = Array.from(element.querySelectorAll('.js-tabs-link'));
         const items = Array.from(element.querySelectorAll('.js-tabs-item'));
+        const select = element.querySelector('.js-tabs-select');
 
         const setActiveTab = index => {
             links.forEach(link => link.classList.remove('active'));
@@ -21,5 +22,13 @@ export default function tabs() {
                 setActiveTab(linkIndex);
             });
         });
+
+        if (window.matchMedia('(max-width: 640px)').matches) {
+            select.addEventListener('change', event => {
+                console.log('Selected tab', event.target.value);
+
+                setActiveTab(event.target.value)
+            })
+        }
     });
 }

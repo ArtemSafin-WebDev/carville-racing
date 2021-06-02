@@ -15,6 +15,7 @@ import filters from './filters';
 import tabs from './tabs';
 import showMore from './showMore';
 import copyCode from './copyCode';
+import productGallery from './productGallery';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs();
     showMore();
     copyCode();
+    productGallery();
 });
 
 window.addEventListener('load', function() {
