@@ -1,0 +1,165 @@
+<div class="modal js-modal" id="partner-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            Заявка на партнерство гоночной команды
+        </h3>
+        <form action="/" method="POST" class="modal__form" data-need-validation>
+            <div class="modal__form-fields">
+                <div class="modal__form-field">
+                    <select name="distrib" class="js-custom-select" required>
+
+                        <option value="distributor">Дистрибьютор</option>
+                        <option value="distributor2">Дистрибьютор 2</option>
+                    </select>
+                    <div class="modal__form-field-label">
+                        Тип точки*
+                    </div>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="name" id="company-name" class="modal__form-field-input"
+                        placeholder="Название компании">
+                    <label class="modal__form-field-label" for="company-name">
+                        Название компании
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="address" id="company-address" class="modal__form-field-input"
+                        placeholder="Адрес">
+                    <label class="modal__form-field-label" for="company-address">
+                        Адрес
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="tel" name="phone" id="company-phone" class="modal__form-field-input js-phone-input"
+                        placeholder="Телефон*" required data-parsley-phone>
+                    <label class="modal__form-field-label" for="company-phone">
+                        Телефон*
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="email" name="email" id="company-email" class="modal__form-field-input"
+                        placeholder="Электронная почта*" required>
+                    <label class="modal__form-field-label" for="company-email">
+                        Электронная почта*
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="link" id="company-link" class="modal__form-field-input"
+                        placeholder="Ссылка на сайт">
+                    <label class="modal__form-field-label" for="company-link">
+                        Ссылка на сайт
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="role" id="company-role" class="modal__form-field-input"
+                        placeholder="Введите вашу должность или имя">
+                    <label class="modal__form-field-label" for="company-role">
+                        Введите вашу должность или имя
+                    </label>
+                </div>
+
+            </div>
+            <button type="submit" class="modal__form-submit">
+                Отправить
+            </button>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="seller-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            Заявка на регистрацию точки продаж
+        </h3>
+        <form action="/" method="POST" class="modal__form" data-need-validation>
+            <div class="modal__form-fields">
+                <div class="modal__form-field">
+                    <select name="distrib" class="js-custom-select" required>
+
+                        <option value="distributor">Дистрибьютор</option>
+                        <option value="distributor2">Дистрибьютор 2</option>
+                    </select>
+                    <div class="modal__form-field-label">
+                        Тип точки*
+                    </div>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="name" id="company-name-2" class="modal__form-field-input"
+                        placeholder="Название компании">
+                    <label class="modal__form-field-label" for="company-name-2">
+                        Название компании
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="country" id="company-country" class="modal__form-field-input"
+                        placeholder="Страна*" required>
+                    <label class="modal__form-field-label" for="company-country">
+                        Страна*
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="region" id="company-region" class="modal__form-field-input"
+                        placeholder="Область*" required>
+                    <label class="modal__form-field-label" for="company-region">
+                        Область*
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="city" id="company-city" class="modal__form-field-input"
+                        placeholder="Город/населенный пункт*" required>
+                    <label class="modal__form-field-label" for="company-city">
+                        Город/населенный пункт*
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="address" id="company-address-2" class="modal__form-field-input"
+                        placeholder="Адрес">
+                    <label class="modal__form-field-label" for="company-address-2">
+                        Адрес
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="tel" name="phone" id="company-phone-2" class="modal__form-field-input js-phone-input"
+                        placeholder="Телефон*" required data-parsley-phone>
+                    <label class="modal__form-field-label" for="company-phone-2">
+                        Телефон*
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="email" name="email" id="company-email-2" class="modal__form-field-input"
+                        placeholder="Электронная почта*" required>
+                    <label class="modal__form-field-label" for="company-email-2">
+                        Электронная почта*
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="link" id="company-link-2" class="modal__form-field-input"
+                        placeholder="Ссылка на сайт">
+                    <label class="modal__form-field-label" for="company-link-2">
+                        Ссылка на сайт
+                    </label>
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" name="role" id="company-role-2" class="modal__form-field-input"
+                        placeholder="Введите вашу должность или имя">
+                    <label class="modal__form-field-label" for="company-role-2">
+                        Введите вашу должность или имя
+                    </label>
+                </div>
+
+            </div>
+            <button type="submit" class="modal__form-submit">
+                Отправить
+            </button>
+        </form>
+    </div>
+</div>

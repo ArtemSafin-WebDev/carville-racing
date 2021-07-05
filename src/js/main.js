@@ -16,7 +16,7 @@ import tabs from './tabs';
 import showMore from './showMore';
 import copyCode from './copyCode';
 import productGallery from './productGallery';
-
+import modals from './modals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showMore();
     copyCode();
     productGallery();
+    modals();
 });
 
 window.addEventListener('load', function() {

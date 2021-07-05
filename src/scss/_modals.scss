@@ -1,0 +1,297 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, 0.8);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem var(--content-padding);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility 0s linear .4s;
+    overflow-x: hidden;
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .4s, visibility .4s;
+    }
+}
+
+.modal__inner {
+    background-color: #fff;
+    width: 100%;
+    max-width: 51.2rem;
+    margin: auto;
+    padding: 2.4rem 3.2rem;
+    padding-bottom: 3.2rem;
+    color: var(--text-color);
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 2.4rem;
+    }
+}
+
+.modal__form-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 2.4rem;
+
+   
+}
+
+.modal__form-field {
+    position: relative;
+
+    .parsley-errors-list.filled {
+        color: var(--primary-color);
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .choices {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    .choices.is-open {
+        z-index: 30;
+    }
+
+    .choices[data-type*='select-one'].is-open::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .choices[data-type*='select-one'] .choices__inner {
+        padding-bottom: 0rem;
+    }
+
+    .choices__inner {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+
+        min-height: 4.4rem;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border-radius: 0 !important;
+        border: none;
+        padding: 0;
+        transition: border-color 0.2s;
+        border-bottom: 1px solid #afafaf;
+    }
+
+    &.parsley-error {
+        .choices__inner {
+            border-color: var(--error-color) !important;
+        }
+    }
+
+    .choices__list--single {
+        padding: 0;
+        padding-right: 0;
+    }
+
+    .choices[data-type*='select-one']:after {
+        border: none;
+        margin: 0;
+        right: 1.4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12.02 6.97'%3E%3Cpath fill='%23afafaf' d='M5.61,6.8a.55.55,0,0,0,.8,0l5.44-5.49a.54.54,0,0,0,0-.79L11.52.19a.53.53,0,0,0-.8,0L6,5,1.3.14a.63.63,0,0,0-.8,0L.18.52a.52.52,0,0,0,0,.79Z' /%3E%3C/svg%3E");
+        width: 1.4rem;
+        height: 0.7rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+    }
+
+    .choices__placeholder {
+        opacity: 1;
+
+        color: #bbbfc4;
+    }
+
+    .choices__list--dropdown {
+        word-break: initial;
+        border: none;
+
+        background: white;
+
+        border-radius: 0rem !important;
+
+        box-shadow: none;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+        display: block !important;
+        opacity: 0;
+        visibility: hidden;
+        padding: 0.5rem 0;
+
+        border: 1px solid #e3e3e3;
+        box-sizing: border-box;
+        box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+        padding: 1.5rem;
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+
+    .choices__list--dropdown .choices__item {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        transition: background-color 0.2s, color 0.2s;
+
+        padding: 0.6rem 0;
+        display: flex;
+        align-items: center;
+
+        &.choices__placeholder {
+            display: none;
+        }
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background: transparent;
+        .choice-radio {
+            border-color: var(--primary-color);
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .choices__list--dropdown .choices__list {
+        max-height: 28rem;
+
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            background-color: white;
+            width: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 22rem;
+        }
+    }
+}
+
+.modal__form-field-input {
+    height: 4.8rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    border-bottom: 1px solid #afafaf;
+    transition: border-color 0.2s;
+    color: #2e2a25;
+
+    &.parsley-error {
+        border-color: var(--primary-color);
+    }
+    @include placeholder {
+        color: #afafaf;
+        opacity: 0;
+    }
+}
+
+.modal__form-field-label {
+    position: absolute;
+    left: 0;
+    top: 1.2rem;
+    color: #afafaf;
+    transition: transform 0.3s;
+    transform-origin: left center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    pointer-events: none;
+}
+
+.modal__form-field-input:focus ~ .modal__form-field-label,
+.modal__form-field-input:not(:placeholder-shown) ~ .modal__form-field-label,
+.choices ~ .modal__form-field-label {
+    transform: scale(0.9) translateY(-2.8rem);
+}
+
+.modal__close {
+    position: absolute;
+    top: 2.4rem;
+    right: 3.2rem;
+
+    @include breakpoint(mobile) {
+        top: 1rem;
+        right: 1rem;
+    }
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        display: block;
+        fill: #3d3f49;
+        transition: fill 0.2s;
+    }
+
+    &:hover {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
+
+.modal__heading {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin-bottom: 3.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 3rem;
+    }
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__form-submit {
+    padding: 1.2rem 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    flex-shrink: 0;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    align-self: flex-end;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+}
