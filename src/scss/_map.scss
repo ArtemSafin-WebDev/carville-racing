@@ -67,7 +67,7 @@
 .map__offices-filters-checkboxes {
     display: flex;
     align-items: center;
-    padding-top: 1rem;
+    // padding-top: 1rem;
 
     @include breakpoint(mobile) {
         display: none;

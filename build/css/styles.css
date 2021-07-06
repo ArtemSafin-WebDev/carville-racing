@@ -7112,8 +7112,7 @@ textarea.contacts__form-field-input {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  padding-top: 1rem; }
+          align-items: center; }
   @media only screen and (max-width: 640px) {
     .map__offices-filters-checkboxes {
       display: none; } }
