@@ -1,0 +1,320 @@
+.map {
+    background: #f9f9f9;
+    padding-bottom: 12rem;
+    padding-top: 3rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 7rem;
+    }
+}
+
+.map__wrapper {
+    margin: 0 calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+    min-height: 40rem;
+    position: relative;
+    background-color: lightgrey;
+    @include breakpoint(mobile) {
+    }
+}
+
+.map__element {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map__offices-filters-row {
+    display: grid;
+    grid-template-columns: minmax(0, 48rem) minmax(0, 1fr);
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.map__offices-filters {
+    padding: 3rem 0;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc(-1 * (100vw - 100% - var(--sb-width)) / 2);
+        right: calc(-1 * (100vw - 100% - var(--sb-width)) / 2);
+        top: 0;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        background-color: white;
+    }
+}
+
+.map__offices-inner-container {
+    width: 100%;
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.map__offices-filters-checkboxes {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.map__offices-filters-checkbox {
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+    margin-right: 4.8rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.map__offices-filters-checkbox-input {
+    display: none;
+}
+
+.map__offices-filters-checkbox-text {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    transition: color 0.2s;
+}
+
+.map__offices-filters-checkbox-input:checked ~ .map__offices-filters-checkbox-text {
+    color: var(--primary-color);
+}
+
+.map__offices-selects {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.map__offices-select {
+    margin-right: 4.8rem;
+    width: 17rem;
+    flex-shrink: 0;
+    &:last-child {
+        margin-right: 0;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+        margin-bottom: 1.2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.map__offices-results {
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+    }
+}
+
+.map__offices-results-header {
+    display: grid;
+    grid-template-columns: minmax(0, 24rem) minmax(0, 24rem) minmax(0, 1fr) minmax(0, 1fr);
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.map__offices-results-header-title {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #62646a;
+    font-weight: 400;
+    padding: 1.6rem 0;
+    &:first-child {
+        padding-left: 1.6rem;
+    }
+}
+
+.map__offices-cards-list {
+    background-color: #fff;
+
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+    }
+}
+
+.map__offices-cards-list-item {
+    border-bottom: 1px solid #e7e7e7;
+    @include breakpoint(mobile) {
+        padding: 0 var(--content-padding);
+    }
+}
+
+.map__offices-card {
+    display: grid;
+    grid-template-columns: minmax(0, 24rem) minmax(0, 24rem) minmax(0, 1fr) minmax(0, 1fr);
+    background-color: #fff;
+    transition: background-color 0.2s;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        padding: 1.6rem 0;
+    }
+    .no-touch &:hover {
+        background: #f9f9f9;
+    }
+}
+
+.map__offices-card-text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: 1.6rem 0;
+    @include breakpointMF(small-tablet) {
+        &:first-child {
+            padding-left: 1.6rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        padding: 0;
+        &:last-child {
+            order: -1;
+            margin-bottom: 1.6rem;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            font-family: var(--helvetica);
+        }
+    }
+}
+
+.map__offices-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.6rem 0;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
+}
+
+.map__offices-card-info-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: currentColor;
+        flex-shrink: 0;
+        margin-right: 1rem;
+        fill: #62646a;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.map__pagination {
+    margin-top: 6rem;
+}
+
+.clusterIcon {
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2e2a25;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--primary-color);
+}
+
+.popover {
+    position: absolute;
+    z-index: 1010;
+
+    text-align: left;
+    white-space: normal;
+}
+
+.popover.top {
+}
+
+.popover-inner {
+    & > * {
+        // width: auto !important;
+        // height: auto !important;
+
+        background: #1a1b1f;
+        color: white;
+        padding: 1.6rem;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: white;
+    }
+}
+
+.popover-title {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.popover-content {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.map__offices-select--hidden {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}

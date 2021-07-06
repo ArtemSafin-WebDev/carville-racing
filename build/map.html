@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Carville
+        Carville - Карта
     </title>
 </head>
 
@@ -347,240 +347,258 @@
 </section>
 
 
-<section class="materials">
+
+<section class="map">
     <div class="container">
-        <div class="materials__top-row">
-            <h1 class="materials__heading">
-                Материалы
-            </h1>
-            <form action="/" method="POST" class="materials__form">
-                <input type="text" class="materials__form-input" placeholder="Поиск материала по артикулу...">
-                <button type="submit" class="materials__form-submit">
-                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
-                        <use xlink:href="#search"></use>
-                    </svg>
-                </button>
-            </form>
+        <div class="map__wrapper">
+            <div class="map__element js-map">
+
+            </div>
         </div>
-        <div class="materials__layout">
-            <div class="materials__layout-sidebar">
-                <nav class="materials__nav">
-                    <a href="#" class="materials__nav-link active">
-                        Общие
-                    </a>
-                    <a href="#" class="materials__nav-link">
-                        Документы
-                    </a>
-                    <a href="#" class="materials__nav-link">
-                        Видеообзоры
-                    </a>
-                    <a href="#" class="materials__nav-link">
-                        Рекламные материалы
-                    </a>
-                </nav>
-                <div class="product__tabs-select">
-                    <select name="select-tab" class="js-custom-select">
-                        <option value="0">
-                            Общие
-                        </option>
-                        <option value="1">
-                            Документы
-                        </option>
-                        <option value="2">
-                            Видеообзоры
-                        </option>
-                        <option value="3">
-                            Рекламные материалы
-                        </option>
-                    </select>
+        <div class="map__offices">
+            <form method="POST" action="/" class="map__offices-filters">
+                <div class="map__offices-inner-container">
+
+                    <div class="map__offices-filters-row">
+
+
+                        <div class="map__offices-filters-checkboxes">
+                            <label class="map__offices-filters-checkbox">
+                                <input type="radio" name="type" value="1" class="map__offices-filters-checkbox-input"
+                                    checked>
+                                <span class="map__offices-filters-checkbox-text">
+                                    Дистрибьюторы
+                                </span>
+                            </label>
+                            <label class="map__offices-filters-checkbox">
+                                <input type="radio" name="type" value="2" class="map__offices-filters-checkbox-input">
+                                <span class="map__offices-filters-checkbox-text">
+                                    Розница
+                                </span>
+                            </label>
+                            <label class="map__offices-filters-checkbox">
+                                <input type="radio" name="type" value="3" class="map__offices-filters-checkbox-input">
+                                <span class="map__offices-filters-checkbox-text">
+                                    Онлайн
+                                </span>
+                            </label>
+                        </div>
+                        <div class="map__offices-selects">
+                            <div class="map__offices-select map__offices-select--hidden">
+                                <div class="catalog-products__filters-select">
+                                    <select name="type" class="js-custom-select">
+                                        <option value="1">Дистрибьюторы</option>
+                                        <option value="2">Розница</option>
+                                        <option value="3">Онлайн</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="map__offices-select">
+                                <div class="catalog-products__filters-select">
+                                    <select name="country" class="js-custom-select">
+                                        <option value="1">Все страны</option>
+                                        <option value="2">Россия</option>
+                                        <option value="3">Беларусь</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="map__offices-select">
+                                <div class="catalog-products__filters-select">
+                                    <select name="city" class="js-custom-select">
+                                        <option value="1">Все города</option>
+                                        <option value="2">Казань</option>
+                                        <option value="3">Москва</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
+            </form>
+
+
+            <div class="map__offices-results">
+                <div class="map__offices-inner-container">
+
+
+                    <div class="map__offices-results-header">
+                        <div class="map__offices-results-header-title">
+                            Страна
+                        </div>
+                        <div class="map__offices-results-header-title">
+                            Город
+                        </div>
+                        <div class="map__offices-results-header-title">
+                            Адрес
+                        </div>
+                        <div class="map__offices-results-header-title">
+                            Название
+                        </div>
+                    </div>
+                    <ul class="map__offices-cards-list">
+                        <li class="map__offices-cards-list-item">
+                            <div class="map__offices-card">
+                                <div class="map__offices-card-text">
+                                    Россия
+                                </div>
+                                <div class="map__offices-card-text">
+                                    Адлер
+                                </div>
+                                <div class="map__offices-card-info">
+                                    <a href="#" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-location">
+                                            <use xlink:href="#offices-location"></use>
+                                        </svg>
+                                        ул. Авиационная, 34/3
+                                    </a>
+                                    <a href="tel:+78622914848" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-phone">
+                                            <use xlink:href="#offices-phone"></use>
+                                        </svg>
+                                        +7 (862) 291-48-48
+                                    </a>
+                                    <a href="#" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-schedule">
+                                            <use xlink:href="#offices-schedule"></use>
+                                        </svg>
+                                        Пн-Сб с 9:00 до 19:00. Вс: выходной
+                                    </a>
+                                </div>
+                                <div class="map__offices-card-text">
+                                    Альфа-Авто
+                                </div>
+                            </div>
+                        </li>
+                        <li class="map__offices-cards-list-item">
+                            <div class="map__offices-card">
+                                <div class="map__offices-card-text">
+                                    Россия
+                                </div>
+                                <div class="map__offices-card-text">
+                                    Адлер
+                                </div>
+                                <div class="map__offices-card-info">
+                                    <a href="#" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-location">
+                                            <use xlink:href="#offices-location"></use>
+                                        </svg>
+                                        ул. Авиационная, 34/3
+                                    </a>
+                                    <a href="tel:+78622914848" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-phone">
+                                            <use xlink:href="#offices-phone"></use>
+                                        </svg>
+                                        +7 (862) 291-48-48
+                                    </a>
+                                    <a href="#" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-schedule">
+                                            <use xlink:href="#offices-schedule"></use>
+                                        </svg>
+                                        Пн-Сб с 9:00 до 19:00. Вс: выходной
+                                    </a>
+                                </div>
+                                <div class="map__offices-card-text">
+                                    Альфа-Авто
+                                </div>
+                            </div>
+                        </li>
+                        <li class="map__offices-cards-list-item">
+                            <div class="map__offices-card">
+                                <div class="map__offices-card-text">
+                                    Россия
+                                </div>
+                                <div class="map__offices-card-text">
+                                    Адлер
+                                </div>
+                                <div class="map__offices-card-info">
+                                    <a href="#" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-location">
+                                            <use xlink:href="#offices-location"></use>
+                                        </svg>
+                                        ул. Авиационная, 34/3
+                                    </a>
+                                    <a href="tel:+78622914848" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-phone">
+                                            <use xlink:href="#offices-phone"></use>
+                                        </svg>
+                                        +7 (862) 291-48-48
+                                    </a>
+                                    <a href="#" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-schedule">
+                                            <use xlink:href="#offices-schedule"></use>
+                                        </svg>
+                                        Пн-Сб с 9:00 до 19:00. Вс: выходной
+                                    </a>
+                                </div>
+                                <div class="map__offices-card-text">
+                                    Альфа-Авто
+                                </div>
+                            </div>
+                        </li>
+                        <li class="map__offices-cards-list-item">
+                            <div class="map__offices-card">
+                                <div class="map__offices-card-text">
+                                    Россия
+                                </div>
+                                <div class="map__offices-card-text">
+                                    Адлер
+                                </div>
+                                <div class="map__offices-card-info">
+                                    <a href="#" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-location">
+                                            <use xlink:href="#offices-location"></use>
+                                        </svg>
+                                        ул. Авиационная, 34/3
+                                    </a>
+                                    <a href="tel:+78622914848" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-phone">
+                                            <use xlink:href="#offices-phone"></use>
+                                        </svg>
+                                        +7 (862) 291-48-48
+                                    </a>
+                                    <a href="#" class="map__offices-card-info-link">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-offices-schedule">
+                                            <use xlink:href="#offices-schedule"></use>
+                                        </svg>
+                                        Пн-Сб с 9:00 до 19:00. Вс: выходной
+                                    </a>
+                                </div>
+                                <div class="map__offices-card-text">
+                                    Альфа-Авто
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="catalog-products__pagination map__pagination">
+                        <a href="#" class="catalog-products__pagination-prev">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-prev">
+                                <use xlink:href="#prev"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="catalog-products__pagination-link current">
+                            1
+                        </a>
+                        <a href="#" class="catalog-products__pagination-link">
+                            2
+                        </a>
+                        <a href="#" class="catalog-products__pagination-link">
+                            3
+                        </a>
+                        <a href="#" class="catalog-products__pagination-next">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-next">
+                                <use xlink:href="#next"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
             </div>
 
 
-            <div class="materials__layout-main">
-                <ul class="materials__list materials__list--two-columns">
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Прайс-лист
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Рекламация для клиента
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Каталог. Общий
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-link">
-                                <use xlink:href="#link"></use>
-                            </svg>
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Рекламация для покупателя
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Каталог. Ароматизаторы
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-link">
-                                <use xlink:href="#link"></use>
-                            </svg>
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Руководство по мерчендайзингу
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Каталог. Инструменты
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-link">
-                                <use xlink:href="#link"></use>
-                            </svg>
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Карточка бренда
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Каталог. Ковры, чехлы
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-link">
-                                <use xlink:href="#link"></use>
-                            </svg>
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Логотип
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Презентация
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-link">
-                                <use xlink:href="#link"></use>
-                            </svg>
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Баннеры
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            YML ссылка продукции
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Листовки
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            XML ссылка продукции
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Вебинары
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="materials__list-item">
-                        <a href="#" class="materials__link">
-                            Метрические данные
-
-
-                            <svg width="14" height="14" aria-hidden="true" class="icon-download">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 </section>
